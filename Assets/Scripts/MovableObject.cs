@@ -1,17 +1,19 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using UnityEngine.U2D.Animation;
+using System.Linq;
+
 
 [RequireComponent(typeof(PolygonCollider2D))]
 public class MovableObject : MonoBehaviour
 {
-    public bool isMovable;
+    public bool isMovable = true;
 
     public GameObject[] snapList;
+    public GameObject[] snapPositions;
 
     private Vector3 offset;
     private Vector3 originalPos;
+    
     
     private float snapDistance = 1f;
     private float moveToOriginSpeed = 100f;
@@ -33,19 +35,20 @@ public class MovableObject : MonoBehaviour
     private void OnMouseUp()
     {
         if (!isMovable || isMovingToOrigin) return;
-        
+
+        var indexedList = snapList.Select((element, index) => new { Index = index, Element = element }); // Index the snapList
 
         //check if the object is near the snap
-        foreach (var snap in snapList)
+        foreach (var snap in indexedList)
         {
-            if (Vector3.Distance(transform.position, snap.transform.position) < snapDistance)
+            if (Vector3.Distance(transform.position, snap.Element.transform.position) < snapDistance)
             {
                 // Destroy the object and the snap
                 Destroy(gameObject);
-                Destroy(snap);
+                Destroy(snap.Element);
 
                 // Instantiate the fusion object
-                Instantiate(fusionObject, snap.transform.position, snap.transform.rotation);
+                Instantiate(fusionObject, snapPositions[snap.Index].transform.position, snap.Element.transform.rotation);
                 return;
             }
         }
