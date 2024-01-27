@@ -5,7 +5,7 @@ using UnityEngine.U2D.Animation;
 
 public class MovableObject : MonoBehaviour
 {
-    public SO_MovableObject so_movableObject;
+    public bool isMovable;
 
     public GameObject[] snapList;
 
@@ -20,22 +20,18 @@ public class MovableObject : MonoBehaviour
 
     private void Start()
     {
-        if (so_movableObject == null) return;
-
-        Debug.Log(gameObject.tag);
-
         originalPos = transform.position;
     }
 
     private void OnMouseDown()
     {
-        if (!so_movableObject.isMovable || isMovingToOrigin) return;
+        if (!isMovable || isMovingToOrigin) return;
         offset = gameObject.transform.position - MouseWorldPos2D();
     }
 
     private void OnMouseUp()
     {
-        if (!so_movableObject.isMovable || isMovingToOrigin) return;
+        if (!isMovable || isMovingToOrigin) return;
         
 
         //check if the object is near the snap
@@ -59,7 +55,7 @@ public class MovableObject : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (!so_movableObject.isMovable || isMovingToOrigin) return;
+        if (!isMovable || isMovingToOrigin) return;
         transform.position = MouseWorldPos2D() + offset;
     }
 
