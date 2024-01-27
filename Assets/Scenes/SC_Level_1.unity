@@ -1681,9 +1681,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1534877942}
     m_Modifications:
     - target: {fileID: 5810243097023115253, guid: 65aa3a57852224743a496006790fe1e9, type: 3}
+      propertyPath: snapList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810243097023115253, guid: 65aa3a57852224743a496006790fe1e9, type: 3}
       propertyPath: snapList.Array.data[0]
       value: 
       objectReference: {fileID: 852815393}
+    - target: {fileID: 5810243097023115253, guid: 65aa3a57852224743a496006790fe1e9, type: 3}
+      propertyPath: snapList.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7729430838080035173, guid: 65aa3a57852224743a496006790fe1e9, type: 3}
       propertyPath: m_Name
       value: SP_Pan_Empty
