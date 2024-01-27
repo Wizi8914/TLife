@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     private static bool created = false;
+
 
     void Awake()
     {
@@ -13,5 +12,12 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             created = true;
         }
+    }
+
+    void Start()
+    {
+        Debug.Log("GameManager Start");
+
+        
     }
 }
