@@ -10,17 +10,14 @@ public class MovableObject : MonoBehaviour
     public bool isMovable = true;
 
     public GameObject[] snapList;
-
     public string snapPositionName;
 
     public GameObject leftSprite;
     public GameObject leftSpritePosition;
     private Vector2 leftSpritePositionOriginalPos;
 
-
     private Vector3 offset;
     private Vector3 originalPos;
-    
     
     private float snapDistance = 1f;
     private float moveToOriginSpeed = 100f;
@@ -39,6 +36,25 @@ public class MovableObject : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //Security checks
+        if (snapList.Length == 0)
+        {
+            Debug.LogError("No snapList set for " + gameObject.name);
+            return;
+        }
+
+        if (snapPositionName == null)
+        {
+            Debug.LogError("No snapPositionName set for " + gameObject.name);
+            return;
+        }
+
+        if (fusionObject == null)
+        {
+            Debug.LogError("No fusionObject set for " + gameObject.name);
+            return;
+        }
+
         if (!isMovable || isMovingToOrigin) return;
         offset = gameObject.transform.position - MouseWorldPos2D();
     }
@@ -49,13 +65,14 @@ public class MovableObject : MonoBehaviour
 
         var indexedList = snapList.Select((element, index) => new { Index = index, Element = element }); // Index the snapList
 
-        GameObject verifiedSnap;
+        GameObject verifiedSnap; // Create a temporary variable to store the snap for a better flexibility
 
         //check if the object is near the snap
         foreach (var snap in indexedList)
         {
             verifiedSnap = snap.Element;
 
+            // Verify if the snap is a clone of a prefab
             if (verifiedSnap.scene.name == null)
             {
                 if (GameObject.Find($"S{verifiedSnap.name}") != null)
@@ -80,9 +97,7 @@ public class MovableObject : MonoBehaviour
                     Debug.Log("leftSprite");
                     Instantiate(leftSprite, leftSpritePositionOriginalPos, Quaternion.identity);
                 }
-
-                
-
+      
                 // Destroy the object and the snap
                 Destroy(verifiedSnap);
                 Destroy(gameObject);
@@ -106,7 +121,6 @@ public class MovableObject : MonoBehaviour
         mouseScreenPos.z = Camera.main.ScreenToWorldPoint(transform.position).z;
         return Camera.main.ScreenToWorldPoint(mouseScreenPos);
     }
-
 
     private IEnumerator MoveToOriginalPosition()
     {

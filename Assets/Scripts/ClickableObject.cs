@@ -10,6 +10,12 @@ public class ClickableObject : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!newSprite)
+        {
+            Debug.LogError("No new sprite set for " + gameObject.name);
+            return;
+        }
+
         if (clicked) return;
 
         gameObject.GetComponent<SpriteRenderer>().sprite = newSprite;
