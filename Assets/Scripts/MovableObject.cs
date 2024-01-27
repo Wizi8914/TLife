@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 using System.Linq;
+using UnityEditor;
+using System;
+using System.Security.Cryptography;
+using System.Diagnostics.Contracts;
 
 
 [RequireComponent(typeof(PolygonCollider2D))]
@@ -9,7 +13,9 @@ public class MovableObject : MonoBehaviour
     public bool isMovable = true;
 
     public GameObject[] snapList;
-    public GameObject[] snapPositions;
+
+    public string snapPositionName;
+
 
     private Vector3 offset;
     private Vector3 originalPos;
@@ -38,17 +44,35 @@ public class MovableObject : MonoBehaviour
 
         var indexedList = snapList.Select((element, index) => new { Index = index, Element = element }); // Index the snapList
 
+        GameObject verifiedSnap;
+
         //check if the object is near the snap
         foreach (var snap in indexedList)
         {
-            if (Vector3.Distance(transform.position, snap.Element.transform.position) < snapDistance)
-            {
-                // Destroy the object and the snap
-                Destroy(gameObject);
-                Destroy(snap.Element);
+            verifiedSnap = snap.Element;
 
+            if (verifiedSnap.scene.name == null)
+            {
+                if (GameObject.Find($"S{verifiedSnap.name}") != null)
+                {
+                    verifiedSnap = GameObject.Find($"S{verifiedSnap.name}");
+                }
+
+                if (GameObject.Find($"{verifiedSnap.name}(Clone)") != null)
+                {
+                    verifiedSnap = GameObject.Find($"{verifiedSnap.name}(Clone)");
+                }
+            }
+
+            if (Vector3.Distance(transform.position, verifiedSnap.transform.position) < snapDistance)
+            {
+               
                 // Instantiate the fusion object
-                Instantiate(fusionObject, snapPositions[snap.Index].transform.position, snap.Element.transform.rotation);
+                GameObject go = Instantiate(fusionObject, GameObject.Find(snapPositionName).transform.position, Quaternion.identity);
+
+                // Destroy the object and the snap
+                Destroy(verifiedSnap);
+                Destroy(gameObject);
                 return;
             }
         }
