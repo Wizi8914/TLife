@@ -393,5 +393,5 @@ MonoBehaviour:
   isMovable: 1
   snapList:
   - {fileID: 4736298696339686326, guid: 983ccf00834c6d148bacccf55cabc797, type: 3}
-  snapPositionName: Snap_Pan
+  snapPositionName: AP_Pan
   fusionObject: {fileID: 1575854869101370732, guid: ac13eb36cc373c146a33b4ea04b54260, type: 3}

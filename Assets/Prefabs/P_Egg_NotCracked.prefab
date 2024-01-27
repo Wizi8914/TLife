@@ -387,5 +387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMovable: 1
   snapList:
-  - {fileID: 2995492546062191152, guid: 99bf4159560608f48abec66ddc712662, type: 3}
+  - {fileID: 5765535096476340153, guid: 531f25f2e7eb2ef429a63529c05b4d70, type: 3}
+  snapPositionName: AP_Pan
   fusionObject: {fileID: 1575854869101370732, guid: ac13eb36cc373c146a33b4ea04b54260, type: 3}
