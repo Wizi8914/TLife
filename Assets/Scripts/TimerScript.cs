@@ -1,19 +1,31 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class TimerScript : MonoBehaviour
 {
-    public float timeLeft;
-    public bool timerIsRunning = false;
+    [Tooltip("Enter Time Limit in seconds")]
+    public float TimeLevelTuto;
+    [Tooltip("Enter Time Limit in seconds")]
+    public float TimeLevel1;
+    [Tooltip("Enter Time Limit in seconds")]
+    public float TimeLevel2;
+    [Tooltip("Enter Time Limit in seconds")]
+    public float TimeLevel3;
 
-    public TMP_Text TimerText;
+    public GameObject TimerPrefab;
+    private GameObject PfTmp;
 
+    private float timeLeft;
+    private bool timerIsRunning = false;
+    private GameObject goCanva;
+    private Canvas canva;
 
     // Start is called before the first frame update
     void Start()
     {
-        timerIsRunning = true;
+        
     }
 
     // Update is called once per frame
@@ -35,6 +47,42 @@ public class TimerScript : MonoBehaviour
         }
     }
 
+    public void ChangeScene(int scIndex)
+    {
+        goCanva = GameObject.Find("Canvas");
+        Debug.Log(goCanva.name);
+        if (goCanva != null)
+        {
+            canva = goCanva.GetComponent<Canvas>();
+        }
+
+        switch (scIndex)
+        {
+            case 1:
+                timeLeft = TimeLevelTuto;
+                PfTmp = Instantiate(TimerPrefab, canva.transform);
+                timerIsRunning = true;
+                break;
+            case 2:
+                timeLeft = TimeLevel1;
+                PfTmp = Instantiate(TimerPrefab, canva.transform);
+                timerIsRunning = true;
+                break;
+            case 3:
+                timeLeft = TimeLevel2;
+                PfTmp = Instantiate(TimerPrefab, canva.transform);
+                timerIsRunning = true;
+                break;
+            case 4:
+                timeLeft = TimeLevel3;
+                PfTmp = Instantiate(TimerPrefab, canva.transform);
+                timerIsRunning = true;
+                break;
+            default:
+                break;
+        }
+    }
+
     private void updateTimer(float currentTime)
     {
         currentTime -= 1;
@@ -42,6 +90,6 @@ public class TimerScript : MonoBehaviour
         float minutes = Mathf.RoundToInt(currentTime / 60);
         float seconds = Mathf.RoundToInt(currentTime % 60);
 
-        TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        PfTmp.GetComponent<TMP_Text>().text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

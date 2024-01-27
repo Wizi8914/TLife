@@ -758,6 +758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302666969}
   - component: {fileID: 302666970}
+  - component: {fileID: 302666971}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -794,6 +795,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4633566e49484ca4f833c5f1fd15bbd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &302666971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302666968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fddebfb703c0a74a97473e368e4995d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeLevelTuto: 5
+  TimeLevel1: 5
+  TimeLevel2: 20
+  TimeLevel3: 20
+  TimerPrefab: {fileID: 14501116553875313, guid: be559c30892219f489d9f06f1621cce6, type: 3}
 --- !u!1 &378441696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,6 +2072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1718033800}
   optionMenu: {fileID: 1646917287}
+  timerScript: {fileID: 302666971}
 --- !u!1 &1366408854
 GameObject:
   m_ObjectHideFlags: 0

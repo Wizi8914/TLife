@@ -667,9 +667,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fddebfb703c0a74a97473e368e4995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 20
-  timerIsRunning: 0
-  TimerText: {fileID: 0}
+  TimeLevelTuto: 10
+  TimeLevel1: 10
+  TimeLevel2: 10
+  TimeLevel3: 10
+  TimerPrefab: {fileID: 0}
 --- !u!1 &1258706611
 GameObject:
   m_ObjectHideFlags: 0
