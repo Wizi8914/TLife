@@ -2,9 +2,6 @@ using System.Collections;
 using UnityEngine;
 using System.Linq;
 using UnityEditor;
-using System;
-using System.Security.Cryptography;
-using System.Diagnostics.Contracts;
 
 
 [RequireComponent(typeof(PolygonCollider2D))]
@@ -15,6 +12,10 @@ public class MovableObject : MonoBehaviour
     public GameObject[] snapList;
 
     public string snapPositionName;
+
+    public GameObject leftSprite;
+    public GameObject leftSpritePosition;
+    private Vector2 leftSpritePositionOriginalPos;
 
 
     private Vector3 offset;
@@ -30,6 +31,10 @@ public class MovableObject : MonoBehaviour
     private void Start()
     {
         originalPos = transform.position;
+        if (leftSprite != null)
+        {
+            leftSpritePositionOriginalPos = leftSpritePosition.transform.position;
+        }
     }
 
     private void OnMouseDown()
@@ -69,6 +74,14 @@ public class MovableObject : MonoBehaviour
                
                 // Instantiate the fusion object
                 GameObject go = Instantiate(fusionObject, GameObject.Find(snapPositionName).transform.position, Quaternion.identity);
+                
+                if (leftSprite != null)
+                {
+                    Debug.Log("leftSprite");
+                    Instantiate(leftSprite, leftSpritePositionOriginalPos, Quaternion.identity);
+                }
+
+                
 
                 // Destroy the object and the snap
                 Destroy(verifiedSnap);
