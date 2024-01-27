@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PolygonCollider2D))]
 public class ClickableObject : MonoBehaviour
 {
     public Sprite newSprite;

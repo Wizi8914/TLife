@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D.Animation;
 
+[RequireComponent(typeof(PolygonCollider2D))]
 public class MovableObject : MonoBehaviour
 {
     public bool isMovable;
