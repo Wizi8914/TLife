@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndManager : MonoBehaviour
 {
     private ScenesManager sm;
+
     private void Start()
     {
         sm = FindObjectOfType<ScenesManager>();

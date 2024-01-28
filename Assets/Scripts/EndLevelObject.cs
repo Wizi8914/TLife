@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,19 +8,27 @@ public class EndLevelObject : MonoBehaviour
     private ScenesManager sm;
     public GameObject endLevelCanva;
 
+    public Sprite victorySprite;
+
     private void Start()
     {
-        Instantiate(endLevelCanva);
+        // Wait 1 second before showing the end level canvas
+        StartCoroutine(ShowEndLevelCanvas());
         sm = FindObjectOfType<ScenesManager>();
-        Debug.Log(sm);
     }
 
     public void NextLevel()
     {
-        Debug.Log(sm);
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-
         Scene sc = SceneManager.GetActiveScene();
         sm.LoadScene(sc.buildIndex + 1);
+    }
+
+    private IEnumerator ShowEndLevelCanvas()
+    {
+        yield return new WaitForSeconds(1f);
+
+        endLevelCanva.GetComponent<Canvas>().GetComponentsInChildren<Image>()[2].sprite = victorySprite;
+
+        Instantiate(endLevelCanva);
     }
 }

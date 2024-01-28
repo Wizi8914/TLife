@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4140240578574941360}
   - component: {fileID: 3161511491762354649}
-  - component: {fileID: -3290225283956116085}
+  - component: {fileID: -8167385232490633023}
   m_Layer: 0
   m_Name: P_Pan_Egg
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3290225283956116085
+--- !u!114 &-8167385232490633023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,3 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endLevelCanva: {fileID: 7784331423278763712, guid: 09944386c263ccd46bea898e00d9ca38, type: 3}
+  victorySprite: {fileID: 21300000, guid: 961cf751b3c9b9a498b8209a79051bf9, type: 3}

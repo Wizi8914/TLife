@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
@@ -23,6 +23,7 @@ public class TimerScript : MonoBehaviour
     private Canvas canva;
 
     public GameObject looseCanva;
+    public Sprite[] looseSprites;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class TimerScript : MonoBehaviour
                 timeLeft = 0;
                 timerIsRunning = false;
 
+                looseCanva.GetComponent<Canvas>().GetComponentsInChildren<Image>()[3].sprite = looseSprites[SceneManager.GetActiveScene().buildIndex -1];
                 Instantiate(looseCanva);
             }
         }

@@ -807,12 +807,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fddebfb703c0a74a97473e368e4995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLevelTuto: 240
+  TimeLevelTuto: 10
   TimeLevel1: 180
   TimeLevel2: 180
   TimeLevel3: 180
   TimerPrefab: {fileID: 14501116553875313, guid: be559c30892219f489d9f06f1621cce6, type: 3}
   looseCanva: {fileID: 2031537838884021685, guid: aa7608a10d329604fadfaa030a8a962b, type: 3}
+  looseSprites:
+  - {fileID: 21300000, guid: cca6d00e47aba95478a3ad569877e7e1, type: 3}
+  - {fileID: 21300000, guid: c92bcebd85cb6c94aae530ef4037f1ff, type: 3}
+  - {fileID: 21300000, guid: c5cc42e4f1007c54aa0f7d2a05f4db67, type: 3}
+  - {fileID: 21300000, guid: cca6d00e47aba95478a3ad569877e7e1, type: 3}
 --- !u!1 &378441696
 GameObject:
   m_ObjectHideFlags: 0
