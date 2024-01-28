@@ -1349,7 +1349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4394002389638160901, guid: c75668c0de78bf04a8a104af8d946d4e, type: 3}
       propertyPath: m_Name
-      value: P_Brosse_a_dent
+      value: SP_Brosse_a_dent
       objectReference: {fileID: 0}
     - target: {fileID: 7544443987868143579, guid: c75668c0de78bf04a8a104af8d946d4e, type: 3}
       propertyPath: snapPositionName
@@ -1435,7 +1435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4418403590993061891, guid: 23bde49b8cad5154683f56b6ef49d906, type: 3}
       propertyPath: m_Name
-      value: P_Scotch
+      value: SP_Scotch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1457,7 +1457,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4225896750036413937, guid: f8925bc739dddb94b81368c947d21b0e, type: 3}
       propertyPath: m_Name
-      value: P_dentifrice
+      value: SP_dentifrice
       objectReference: {fileID: 0}
     - target: {fileID: 7727477378257312310, guid: f8925bc739dddb94b81368c947d21b0e, type: 3}
       propertyPath: m_LocalPosition.x

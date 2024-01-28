@@ -23,6 +23,7 @@ public class MovableObject : MonoBehaviour
 
     [Header("Add one more Prefab to spawn")]
     //Si sprite en plus à positionner après la fusion
+    public bool isPrefabToSpawnNeeded;
     public GameObject prefabToSpawn;
     public GameObject prefabPosition;
     private Vector2 prefabPositionOriginalPos;
@@ -30,7 +31,7 @@ public class MovableObject : MonoBehaviour
     private Vector3 offset;
     private Vector3 originalPos;
 
-    private float snapDistance = 1f;
+    private float snapDistance = 4.5f;
     private float moveToOriginSpeed = 100f;
     private bool isMovingToOrigin = false;
     
@@ -75,12 +76,14 @@ public class MovableObject : MonoBehaviour
             foreach (var snap in snapableObjectList)
             {
                 snapTmp = snap;
+
                 // Verify if the snap is a clone of a prefab
                 if (snap.scene.name == null)
                 {
-                    if (GameObject.Find($"S{snap.name}") != null)
+
+                    if (GameObject.Find($"{snap.name}") != null)
                     {
-                        snapTmp = GameObject.Find($"S{snap.name}");
+                        snapTmp = GameObject.Find($"{snap.name}");
                     }
 
                     if (GameObject.Find($"{snap.name}(Clone)") != null)
@@ -91,8 +94,27 @@ public class MovableObject : MonoBehaviour
 
                 if (Vector3.Distance(transform.position, snapTmp.transform.position) < snapDistance)
                 {
+                    Debug.Log("Snap");
+
                     if (isFusionNeeded)
                     {
+                        if (isPrefabToSpawnNeeded)
+                        {
+
+                            gameObject.transform.SetPositionAndRotation(GameObject.Find(snapPositionName).transform.position, Quaternion.identity);
+                            if (isLockOnSnap)
+                            {
+                                isLocked = true;
+                            }
+
+                            if (prefabToSpawn != null)
+                            {
+                                Instantiate(prefabToSpawn, prefabPositionOriginalPos, Quaternion.identity);
+                            }
+
+                            return;
+                        }
+
                         if (fusionObject != null)
                         {
                             // Instantiate the fusion object
