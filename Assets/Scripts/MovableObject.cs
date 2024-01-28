@@ -38,7 +38,7 @@ public class MovableObject : MonoBehaviour
     private void Start()
     {
         originalPos = transform.position;
-        if (prefabToSpawn != null)
+        if (prefabToSpawn != null && prefabPosition != null)
         {
             prefabPositionOriginalPos = prefabPosition.transform.position;
         }
@@ -47,6 +47,7 @@ public class MovableObject : MonoBehaviour
     private void OnMouseDown()
     {
         if (isLocked) return;
+        originalPos = transform.position;
         //Security checks
         if (snapableObjectList.Length == 0)
         {

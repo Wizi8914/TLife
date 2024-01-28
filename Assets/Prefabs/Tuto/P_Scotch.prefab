@@ -371,9 +371,10 @@ MonoBehaviour:
   isLockOnSnap: 0
   moveDirectionX: 0
   moveDirectionY: 0
-  snapPositionName: 
-  snapableObjectList: []
-  isFusionNeeded: 0
-  fusionObject: {fileID: 0}
+  snapPositionName: AP_BrosseADent2
+  snapableObjectList:
+  - {fileID: 4390907670222387325, guid: 13e2e4df324aebc4883e10ea056835e1, type: 3}
+  isFusionNeeded: 1
+  fusionObject: {fileID: 2303844028546911050, guid: 464c7e920c468244189551248b0249f0, type: 3}
   prefabToSpawn: {fileID: 0}
   prefabPosition: {fileID: 0}

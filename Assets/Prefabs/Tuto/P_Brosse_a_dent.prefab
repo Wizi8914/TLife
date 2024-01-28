@@ -122,7 +122,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.048, y: 2.048}
+    oldSize: {x: 2.1557894, y: 2.1557894}
     newSize: {x: 20.48, y: 20.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -506,10 +506,10 @@ MonoBehaviour:
   isLockOnSnap: 0
   moveDirectionX: 0
   moveDirectionY: 0
-  snapPositionName: 
+  snapPositionName: AP_BrosseADent
   snapableObjectList:
   - {fileID: 4225896750036413937, guid: f8925bc739dddb94b81368c947d21b0e, type: 3}
   isFusionNeeded: 1
-  fusionObject: {fileID: 4394002389638160901}
+  fusionObject: {fileID: 4390907670222387325, guid: 13e2e4df324aebc4883e10ea056835e1, type: 3}
   prefabToSpawn: {fileID: 0}
   prefabPosition: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1167987790995498876}
   - component: {fileID: 30797788990618213}
   m_Layer: 0
-  m_Name: P_filtre_bleu_avec_light
+  m_Name: P_filtre_bleu_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9d00177eb2c9f224e8479ad93be469c1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 818b7551d8fd8c341a01fd8561ab7836, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
