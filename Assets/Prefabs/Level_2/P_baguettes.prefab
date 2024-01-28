@@ -458,11 +458,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e9ad97538fb2b4cb56de7fb871dae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCountingForVictory: 0
   isMovable: 1
   isLockOnSnap: 0
   moveDirectionX: 0
   moveDirectionY: 0
-  snapPositionName: Ap_Baguette
+  snapPositionName: AP_Baguettes
   snapableObjectList:
   - {fileID: 7228113723063112885, guid: 2255865f893e90e4e95f6bbe0c6f89ce, type: 3}
   isFusionNeeded: 1

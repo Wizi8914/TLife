@@ -301,15 +301,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e9ad97538fb2b4cb56de7fb871dae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCountingForVictory: 0
   isMovable: 1
   isLockOnSnap: 0
   moveDirectionX: 0
   moveDirectionY: 0
-  snapPositionName: Ap_Baguette
+  snapPositionName: AP_Baguettes
   snapableObjectList:
   - {fileID: 7381240340941886249, guid: cb0a46cfb6d6c9348ae6b8c815ed4d6d, type: 3}
   isFusionNeeded: 1
-  fusionObject: {fileID: 7381240340941886249, guid: cb0a46cfb6d6c9348ae6b8c815ed4d6d, type: 3}
+  fusionObject: {fileID: 8723836038250776277, guid: 478675d0abbf9d64cb28dd277495a7ae, type: 3}
   isPrefabToSpawnNeeded: 0
   prefabToSpawn: {fileID: 0}
   prefabPosition: {fileID: 0}
