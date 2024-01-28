@@ -3,24 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndLevelObject : MonoBehaviour
+public class EndManager : MonoBehaviour
 {
     private ScenesManager sm;
-    public GameObject endLevelCanva;
-
     private void Start()
     {
-        Instantiate(endLevelCanva);
         sm = FindObjectOfType<ScenesManager>();
-        Debug.Log(sm);
     }
 
+    public void RefreshLevel()
+    {
+        Scene sc = SceneManager.GetActiveScene();
+        sm.LoadScene(sc.buildIndex);
+    }
     public void NextLevel()
     {
-        Debug.Log(sm);
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-
         Scene sc = SceneManager.GetActiveScene();
         sm.LoadScene(sc.buildIndex + 1);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
