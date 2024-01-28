@@ -30,6 +30,11 @@ public class EndManager : MonoBehaviour
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
+    public void LoadEndMenu()
+    {
+        SceneManager.LoadScene(5);
+        Time.timeScale = 1;
+    }
 
     public void QuitGame()
     {

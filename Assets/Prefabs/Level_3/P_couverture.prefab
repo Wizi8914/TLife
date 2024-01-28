@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e9ad97538fb2b4cb56de7fb871dae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCountingForVictory: 1
   isMovable: 1
   isLockOnSnap: 1
   moveDirectionX: 0
@@ -222,5 +223,6 @@ MonoBehaviour:
   - {fileID: 0}
   isFusionNeeded: 0
   fusionObject: {fileID: 0}
+  isPrefabToSpawnNeeded: 0
   prefabToSpawn: {fileID: 0}
   prefabPosition: {fileID: 0}

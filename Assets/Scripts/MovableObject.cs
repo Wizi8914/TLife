@@ -7,6 +7,9 @@ using UnityEditor;
 [RequireComponent(typeof(PolygonCollider2D))]
 public class MovableObject : MonoBehaviour
 {
+    public bool isCountingForVictory;
+    private VictoryManager vm;
+
     [Header("Movement")]
     public bool isMovable = true;
     public bool isLockOnSnap = false;
@@ -95,6 +98,11 @@ public class MovableObject : MonoBehaviour
                 if (Vector3.Distance(transform.position, snapTmp.transform.position) < snapDistance)
                 {
                     Debug.Log("Snap");
+                    if (isCountingForVictory)
+                    {
+                        vm = FindObjectOfType<VictoryManager>();
+                        vm.IncrementConditionNumber();
+                    }
 
                     if (isFusionNeeded)
                     {

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class VictoryManager : MonoBehaviour
 {
     public int conditionNumber;
-    private int actualNumber = 0;
+    public int actualNumber = 0;
 
     private ScenesManager sm;
     public GameObject endLevelCanva;
