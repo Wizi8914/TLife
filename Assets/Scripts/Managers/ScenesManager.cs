@@ -11,8 +11,6 @@ public class ScenesManager : MonoBehaviour
 
     public TimerScript timerScript;
 
-    private int currentSceneID;
-
     private void Start()
     {
 
@@ -25,7 +23,6 @@ public class ScenesManager : MonoBehaviour
 
     public void LoadScene(int sceneID)
     {
-        currentSceneID = sceneID;
         SceneManager.LoadScene(sceneID);
     }
     public void MainMenu(bool isActive)

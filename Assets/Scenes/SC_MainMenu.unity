@@ -807,10 +807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fddebfb703c0a74a97473e368e4995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLevelTuto: 200
-  TimeLevel1: 5
-  TimeLevel2: 20
-  TimeLevel3: 20
+  TimeLevelTuto: 240
+  TimeLevel1: 180
+  TimeLevel2: 180
+  TimeLevel3: 180
   TimerPrefab: {fileID: 14501116553875313, guid: be559c30892219f489d9f06f1621cce6, type: 3}
 --- !u!1 &378441696
 GameObject:
