@@ -812,6 +812,7 @@ MonoBehaviour:
   TimeLevel2: 180
   TimeLevel3: 180
   TimerPrefab: {fileID: 14501116553875313, guid: be559c30892219f489d9f06f1621cce6, type: 3}
+  looseCanva: {fileID: 2031537838884021685, guid: aa7608a10d329604fadfaa030a8a962b, type: 3}
 --- !u!1 &378441696
 GameObject:
   m_ObjectHideFlags: 0

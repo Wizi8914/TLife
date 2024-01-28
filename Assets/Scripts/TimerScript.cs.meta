@@ -3,7 +3,9 @@ guid: 8fddebfb703c0a74a97473e368e4995d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - TimerPrefab: {instanceID: 0}
+  - looseCanva: {fileID: 2031537838884021685, guid: aa7608a10d329604fadfaa030a8a962b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -22,10 +22,12 @@ public class TimerScript : MonoBehaviour
     private GameObject goCanva;
     private Canvas canva;
 
+    public GameObject looseCanva;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeLeft++; // To avoit right time a the start
     }
 
     // Update is called once per frame
@@ -40,9 +42,10 @@ public class TimerScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
                 timeLeft = 0;
                 timerIsRunning = false;
+
+                Instantiate(looseCanva);
             }
         }
     }
