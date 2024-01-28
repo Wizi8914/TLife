@@ -305,8 +305,9 @@ MonoBehaviour:
   isLockOnSnap: 0
   moveDirectionX: 0
   moveDirectionY: 0
-  snapPositionName: 
-  snapableObjectList: []
+  snapPositionName: Ap_Baguette
+  snapableObjectList:
+  - {fileID: 7381240340941886249, guid: cb0a46cfb6d6c9348ae6b8c815ed4d6d, type: 3}
   isFusionNeeded: 1
   fusionObject: {fileID: 7381240340941886249, guid: cb0a46cfb6d6c9348ae6b8c815ed4d6d, type: 3}
   isPrefabToSpawnNeeded: 0
