@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fddebfb703c0a74a97473e368e4995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLevelTuto: 5
+  TimeLevelTuto: 200
   TimeLevel1: 5
   TimeLevel2: 20
   TimeLevel3: 20

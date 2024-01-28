@@ -97,3 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f8a33fc5ffea745b87a20ebe03aaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endLevelCanva: {fileID: 7784331423278763712, guid: 09944386c263ccd46bea898e00d9ca38, type: 3}

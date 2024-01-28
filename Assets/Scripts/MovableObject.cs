@@ -88,7 +88,7 @@ public class MovableObject : MonoBehaviour
                     }
                 }
 
-                if (Vector3.Distance(transform.position, snap.transform.position) < snapDistance)
+                if (Vector3.Distance(transform.position, snapTmp.transform.position) < snapDistance)
                 {
                     if (isFusionNeeded)
                     {
@@ -99,13 +99,12 @@ public class MovableObject : MonoBehaviour
                         }
                         if (prefabToSpawn != null)
                         {
-                            Debug.Log("leftSprite");
                             Instantiate(prefabToSpawn, prefabPositionOriginalPos, Quaternion.identity);
                         }
                         if (fusionObject != null)
                         {
                             // Destroy the object and the snap
-                            Destroy(snap);
+                            Destroy(snapTmp);
                             Destroy(gameObject);
                         }
 

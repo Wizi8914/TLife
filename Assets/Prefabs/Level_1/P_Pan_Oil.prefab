@@ -391,10 +391,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMovable: 1
-  isEndingLevel: 0
-  snapList:
-  - {fileID: 4736298696339686326, guid: 983ccf00834c6d148bacccf55cabc797, type: 3}
+  isLockOnSnap: 0
+  moveDirectionX: 0
+  moveDirectionY: 0
   snapPositionName: AP_Pan
-  leftSprite: {fileID: 3140432303730648992, guid: f49f1e67fa59fd04e9a7e9beee970145, type: 3}
-  leftSpritePosition: {fileID: 4736298696339686326, guid: 983ccf00834c6d148bacccf55cabc797, type: 3}
+  snapableObjectList:
+  - {fileID: 4736298696339686326, guid: 983ccf00834c6d148bacccf55cabc797, type: 3}
+  isFusionNeeded: 1
   fusionObject: {fileID: 1575854869101370732, guid: ac13eb36cc373c146a33b4ea04b54260, type: 3}
+  prefabToSpawn: {fileID: 8966548251170213148, guid: a1dcc88229a4ae142a9e63681ce74c3d, type: 3}
+  prefabPosition: {fileID: 7524063528006524608, guid: b952a4496168a594d8226d1f7110ee13, type: 3}
