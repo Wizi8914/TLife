@@ -30,7 +30,7 @@ public class MovableObject : MonoBehaviour
     private Vector3 offset;
     private Vector3 originalPos;
 
-    private float snapDistance = 1f;
+    private float snapDistance = 4f;
     private float moveToOriginSpeed = 100f;
     private bool isMovingToOrigin = false;
     
@@ -78,9 +78,9 @@ public class MovableObject : MonoBehaviour
                 // Verify if the snap is a clone of a prefab
                 if (snap.scene.name == null)
                 {
-                    if (GameObject.Find($"S{snap.name}") != null)
+                    if (GameObject.Find($"{snap.name}") != null)
                     {
-                        snapTmp = GameObject.Find($"S{snap.name}");
+                        snapTmp = GameObject.Find($"{snap.name}");
                     }
 
                     if (GameObject.Find($"{snap.name}(Clone)") != null)

@@ -6,16 +6,12 @@ using UnityEngine.Audio;
 public class SoundsManager : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    //private static bool created = false;
-    //
-    //void Awake()
-    //{
-    //    if (!created)
-    //    {
-    //        DontDestroyOnLoad(this.gameObject);
-    //        created = true;
-    //    }
-    //}
+    public AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource.Play();
+    }
 
     public void SetLevelMaster(float sliderValue)
     {

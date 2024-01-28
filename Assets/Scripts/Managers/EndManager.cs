@@ -16,16 +16,19 @@ public class EndManager : MonoBehaviour
     {
         Scene sc = SceneManager.GetActiveScene();
         sm.LoadScene(sc.buildIndex);
+        Time.timeScale = 1;
     }
     public void NextLevel()
     {
         Scene sc = SceneManager.GetActiveScene();
         sm.LoadScene(sc.buildIndex + 1);
+        Time.timeScale = 1;
     }
 
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 
     public void QuitGame()

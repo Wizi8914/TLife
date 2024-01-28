@@ -1,23 +1,44 @@
 using System.Collections;
-using UnityEngine.UI;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
+using UnityEngine.UI;
 
-public class EndLevelObject : MonoBehaviour
+public class VictoryManager : MonoBehaviour
 {
+    public int conditionNumber;
+    private int actualNumber = 0;
+
     private ScenesManager sm;
     public GameObject endLevelCanva;
 
+
     public Sprite victorySprite;
 
-    private void Start()
+    void Start()
+    {
+        
+    }
+    
+    void Update()
+    {
+        if(actualNumber >= conditionNumber)
+        {
+            EndLevelCanvas();
+        }
+    }
+
+    public void IncrementConditionNumber()
+    {
+        actualNumber++;
+    }
+
+    public void EndLevelCanvas()
     {
         // Wait 1 second before showing the end level canvas
         StartCoroutine(ShowEndLevelCanvas());
         sm = FindObjectOfType<ScenesManager>();
     }
-
     public void NextLevel()
     {
         Scene sc = SceneManager.GetActiveScene();

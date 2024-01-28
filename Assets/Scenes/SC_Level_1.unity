@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSprite: {fileID: 21300000, guid: 760da6171abfc654eaa7b3ec927b0fee, type: 3}
-  clicked: 0
+  objectsInside: []
 --- !u!60 &64499303
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -366,8 +366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266, y: -486}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 230, y: -486}
+  m_SizeDelta: {x: 1500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204811541
 MonoBehaviour:
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mangeeeeeer
+  m_text: Jai faim ! Je mangerais bien un oeuf au plat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -416,8 +416,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
-  m_fontSizeBase: 64
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSprite: {fileID: 21300000, guid: 26baa0907e5799d49b7b17683d17ddca, type: 3}
-  clicked: 0
+  objectsInside: []
 --- !u!60 &621586663
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSprite: {fileID: 21300000, guid: e91c3890619ce4642979a00d1c0fca12, type: 3}
-  clicked: 0
+  objectsInside: []
 --- !u!60 &1593544504
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1786,7 +1786,7 @@ PrefabInstance:
       objectReference: {fileID: 852815393}
     - target: {fileID: 7729430838080035173, guid: 65aa3a57852224743a496006790fe1e9, type: 3}
       propertyPath: m_Name
-      value: SP_Pan_Empty
+      value: P_Pan_Empty
       objectReference: {fileID: 0}
     - target: {fileID: 7761010606158207237, guid: 65aa3a57852224743a496006790fe1e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1957,7 +1957,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4736298696339686326, guid: 983ccf00834c6d148bacccf55cabc797, type: 3}
       propertyPath: m_Name
-      value: SP_Egg_NotCracked
+      value: P_Egg_NotCracked
       objectReference: {fileID: 0}
     - target: {fileID: 7003014449192929114, guid: 983ccf00834c6d148bacccf55cabc797, type: 3}
       propertyPath: prefabToSpawn
@@ -2034,7 +2034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2308488541078773803, guid: 924f65ca30a07e0448f214ec36027191, type: 3}
       propertyPath: m_Name
-      value: SP_Oil
+      value: P_Oil
       objectReference: {fileID: 0}
     - target: {fileID: 3618444791617072102, guid: 924f65ca30a07e0448f214ec36027191, type: 3}
       propertyPath: isFusionNeeded
